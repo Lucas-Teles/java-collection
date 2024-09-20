@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ListaTarefa {
     private List<Tarefa> listaDeTarefas;
-    public listaDeTarefas() {
+    public ListaTarefa() {
         this.listaDeTarefas = new ArrayList<>();
     }
     public void adicionarTarefa(String descricao){
@@ -27,5 +27,22 @@ public class ListaTarefa {
     }
     public void obterDescricoesDasTarefas(){
         System.out.println(listaDeTarefas);
+
+    }
+
+    public static void main(String[] args) {
+        ListaTarefa listaTarefa = new ListaTarefa();
+        System.out.println("O número total de elementos na lista é: " + listaTarefa.obterNumeroTotalDeTarefas());
+
+        listaTarefa.adicionarTarefa("Tarefa 1");
+        listaTarefa.adicionarTarefa("Tarefa 2");
+        listaTarefa.adicionarTarefa("Tarefa 4");
+        listaTarefa.adicionarTarefa("Tarefa 4");
+        System.out.println("O número total de elementos na lista é: " + listaTarefa.obterNumeroTotalDeTarefas());
+        listaTarefa.removerTarefa("Tarefa 4");
+        System.out.println("O número total de elementos na lista é: " + listaTarefa.obterNumeroTotalDeTarefas());
+        listaTarefa.obterDescricoesDasTarefas();
+
+
     }
 }
