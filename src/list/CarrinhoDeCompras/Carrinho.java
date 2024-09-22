@@ -27,7 +27,8 @@ public class Carrinho {
     }
 
     public BigDecimal calcularValorTotal(){
-        
+
+        return null;
     }
 
 }
